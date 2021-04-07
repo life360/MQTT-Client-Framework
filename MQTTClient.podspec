@@ -18,6 +18,8 @@ Pod::Spec.new do |mqttc|
 	mqttc.tvos.deployment_target = "9.0"
 	mqttc.default_subspec = 'Core'
 
+	mqttc.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
+
 	mqttc.subspec 'Core' do |core|
 		core.dependency 'MQTTClient/Min'
 		core.dependency 'MQTTClient/Manager'
